@@ -10,9 +10,13 @@ const Header = () => {
   return (
     <div className="header" id="header">
       <img src={Logo} alt="" className="logo" />
-      {(menuOpened===false && mobile===true)? (
+      {menuOpened === false && mobile === true ? (
         <div
-          style={{ backgroundColor: "var(--appColor)", padding: "0.5rem", borderRadius: "5px" }}
+          style={{
+            backgroundColor: "var(--appColor)",
+            padding: "0.5rem",
+            borderRadius: "5px",
+          }}
           onClick={() => setMenuOpened(true)}
         >
           <img
@@ -57,6 +61,16 @@ const Header = () => {
           <li>
             <Link
               onClick={() => setMenuOpened(false)}
+              to="coaches"
+              spy={true}
+              smooth={true}
+            >
+              Coaches
+            </Link>
+          </li>
+          <li>
+            <Link
+              onClick={() => setMenuOpened(false)}
               to="plans"
               spy={true}
               smooth={true}
@@ -84,16 +98,7 @@ const Header = () => {
               Contact us
             </Link>
           </li>
-          <li>
-            <Link
-              onClick={() => setMenuOpened(false)}
-              to="about"
-              spy={true}
-              smooth={true}
-            >
-              About us
-            </Link>
-          </li>
+        
         </ul>
       )}
     </div>

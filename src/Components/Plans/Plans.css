@@ -1,5 +1,5 @@
 .plans-container {
-  margin-top: -4rem;
+  margin-top: 0rem;
   padding: 0 2rem;
   display: flex;
   flex-direction: column;
@@ -33,7 +33,7 @@
   color: white;
   gap: 2rem;
   padding: 1.5rem;
-  width: 15rem;
+  width: 18rem;
 }
 .plan:nth-child(2){
     background: var(--planCard);

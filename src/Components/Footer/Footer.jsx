@@ -10,17 +10,17 @@ const Footer = () => {
         <div className="box-container">
           <div className="box">
             <h3>Address</h3>
-            <a href="googlemaplink">Satara Parisar, Aurangabad</a>
-            <a href="wa.me"><img alt="whatsapp" src={wp} height="80" width="240" className="btn"/></a>
+            <a href="googlemaplink">kuza Bandai, Swat</a>
+            {/* <a href="wa.me"><img alt="whatsapp" src={wp} height="80" width="240" className="btn"/></a> */}
           </div>
         <div className="box">
             <h3>Contact Us </h3>
                 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></link>
                 <i className="fa">
-                <a href="tel:+91 8888817886">+91 4363557535 </a></i>  
+                <a href="tel:+91 8888817886">+92 333 9501965 </a></i>  
                 <br></br>
                 <i className="fa">
-                <a href="mailto:info.shubham@gmail.com">info@shubham.com</a></i>
+                <a href="mailto:info.shubham@gmail.com">info@pukhtoongym.com</a></i>
             </div>
         <div className="box">
             <h3>Follow us</h3>
@@ -31,10 +31,9 @@ const Footer = () => {
                 <div className="hero1">
                 <h1>Reach us at</h1>
                  <div className="home__social-icon">
-                 <a href="Facebook"><i className="fab fa-facebook-f"> Facebook</i></a>
-                 <a href="Instagram"><i className="fab fa-instagram"> Instagram</i></a>
-                 <a href="Whatsapp link"><i className="fab fa-whatsapp">Whatsapp</i></a>
-                 <a href="https://www.google.com/maps/">
+                 <a href="https://www.facebook.com/Pukht00NWorld/" target="_blank" rel="noopener noreferrer"><i className="fab fa-facebook-f"> Facebook</i></a>
+                 <a href="https://api.whatsapp.com/send?phone=%2B923127488522&app=facebook&entry_point=page_cta&fbclid=IwZXh0bgNhZW0CMTAAYnJpZBExQ202UWFERk1pQ2Vmb09BcAEeIa9B0WkeAW-Tl850DqSDsAmgKTFz-gI7Yn8r0nmWgVX9RLcoQbN3OJ3a1ZE_aem_UpWAt7h0Ofg20Yr2VcolpQ" target="_blank" rel="noopener noreferrer"><i className="fab fa-whatsapp">Whatsapp</i></a>
+                 <a href="https://maps.app.goo.gl/WdHrCdTb2GwFP6JZ7" target="_blank" rel="noopener noreferrer">
                 <i className="fab fa-google">Google Maps</i></a>
                </div>
             </div>
@@ -42,7 +41,7 @@ const Footer = () => {
       </div>
     </section>
     <div className="credits">
-        <p>© 2023 Shuence. All Rights Reserved.</p>
+        <p>© {new Date().getFullYear()} Pukhtoon Gym and Fitness Club. All Rights Reserved.</p>
       </div>
     </div>
     </>

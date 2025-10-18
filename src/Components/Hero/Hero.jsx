@@ -48,7 +48,7 @@ const Hero = () => {
         <div className="figures">
           <div>
             <span>
-              <NumberCounter end={140} start={100} delay={4} preFix="+" />
+              <NumberCounter end={10} start={1} delay={4} preFix="+" />
             </span>
             <span>expert coaches</span>
           </div>
@@ -60,28 +60,28 @@ const Hero = () => {
           </div>
           <div>
             <span>
-              <NumberCounter end={50} delay={2} preFix="+" />
+              <NumberCounter end={20} delay={2} preFix="+" />
             </span>
             <span>fitness programs</span>
           </div>
         </div>
 
         {/* hero buttons */}
-        <div className="hero-btns">
+        {/* <div className="hero-btns">
           <button className="btn">Get Started</button>
           <button className="btn">Learn More</button>
-        </div>
+        </div> */}
       </div>
 
       {/* Right Side */}
       <div className="right-h">
-      <Link className="btn"
+      {/* <Link className="btn"
               to="contact"
               spy={true}
               smooth={true}
             >
               Join now
-            </Link>
+            </Link> */}
 
         {/* heart rate */}
         <motion.div
