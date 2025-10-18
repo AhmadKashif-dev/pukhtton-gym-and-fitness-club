@@ -1,16 +1,26 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Logo from "../../assets/logo.png";
 import "./Header.css";
 import { Link } from "react-scroll";
 import Bars from "../../assets/bars.png";
 
 const Header = () => {
-  const mobile = window.innerWidth <= 768 ? true : false;
+  const [mobile, setMobile] = useState(window.innerWidth <= 768);
   const [menuOpened, setMenuOpened] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setMobile(window.innerWidth <= 768);
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
   return (
     <div className="header" id="header">
       <img src={Logo} alt="" className="logo" />
-      {menuOpened === false && mobile === true ? (
+      {(menuOpened === false && mobile === true) ? (
         <div
           style={{
             backgroundColor: "var(--appColor)",
@@ -25,7 +35,7 @@ const Header = () => {
             style={{ width: "1.5rem", height: "1.5rem" }}
           />
         </div>
-      ) : (
+      ) : mobile === false ? (
         <ul className="header-menu">
           <li>
             <Link
@@ -100,6 +110,88 @@ const Header = () => {
           </li>
         
         </ul>
+      ) : (
+        <div className={`mobile-menu-container ${menuOpened ? 'active' : ''}`}>
+          <ul className="header-menu">
+            <li className="close-btn">
+              <button onClick={() => setMenuOpened(false)}>
+                <span>&times;</span>
+              </button>
+            </li>
+            <li>
+              <Link
+                onClick={() => setMenuOpened(false)}
+                activeClass="active"
+                to="header"
+                spy={true}
+                smooth={true}
+              >
+                Home
+              </Link>
+            </li>
+            <li>
+              <Link
+                onClick={() => setMenuOpened(false)}
+                to="programs"
+                spy={true}
+                smooth={true}
+              >
+                Programs
+              </Link>
+            </li>
+            <li>
+              <Link
+                onClick={() => setMenuOpened(false)}
+                to="reasons"
+                spy={true}
+                smooth={true}
+              >
+                Why us
+              </Link>
+            </li>
+            <li>
+              <Link
+                onClick={() => setMenuOpened(false)}
+                to="coaches"
+                spy={true}
+                smooth={true}
+              >
+                Coaches
+              </Link>
+            </li>
+            <li>
+              <Link
+                onClick={() => setMenuOpened(false)}
+                to="plans"
+                spy={true}
+                smooth={true}
+              >
+                Plans
+              </Link>
+            </li>
+            <li>
+              <Link
+                onClick={() => setMenuOpened(false)}
+                to="testimonials"
+                spy={true}
+                smooth={true}
+              >
+                Testimonials
+              </Link>
+            </li>
+            <li>
+              <Link
+                onClick={() => setMenuOpened(false)}
+                to="contact"
+                spy={true}
+                smooth={true}
+              >
+                Contact us
+              </Link>
+            </li>
+          
+          </ul>
+        </div>
       )}
     </div>
   );
